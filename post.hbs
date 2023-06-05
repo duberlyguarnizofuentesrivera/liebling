@@ -4,13 +4,13 @@ This template is used for the post page.
 
 {{!-- This block preloads specific assets for the post page --}}
 {{#contentFor "preload"}}
-<link rel="preload" href="{{asset " css/post.css"}}" as="style" />
-<link rel="preload" href="{{asset " js/post.js"}}" as="script" />
+<link rel="preload" href="{{asset "css/post.css"}}" as="style" />
+<link rel="preload" href="{{asset "js/post.js"}}" as="script" />
 {{/contentFor}}
 
 {{!-- This block loads specific styles for the post page --}}
 {{#contentFor "styles"}}
-<link rel="stylesheet" type="text/css" href="{{asset " css/post.css"}}" media="screen" />
+<link rel="stylesheet" type="text/css" href="{{asset "css/post.css"}}" media="screen" />
 {{/contentFor}}
 
 {{!-- The tag below means: insert everything in this file
@@ -115,7 +115,7 @@ into the {body} of the default.hbs template --}}
                 {{#if primary_author.profile_image}}
                 <div style="background-image: url({{primary_author.profile_image}});"></div>
                 {{else}}
-                <div style="background-image: url({{asset " images/default-avatar-square-small.jpg"}});"></div>
+                <div style="background-image: url({{asset "images/default-avatar-square-small.jpg"}});"></div>
                 {{/if}}
               </a>
             </div>
@@ -218,5 +218,5 @@ into the {body} of the default.hbs template --}}
   {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs
   --}}
   {{#contentFor "scripts"}}
-  <script defer src="{{asset " js/post.js"}}"></script>
+  <script defer src="{{asset "js/post.js"}}"></script>
   {{/contentFor}}
